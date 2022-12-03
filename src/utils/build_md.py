@@ -1,6 +1,6 @@
 import os
 
-base_link = "https://github.com/mrBymax/advent-of-code-2022.git"
+base_link = "https://github.com/mrBymax/advent-of-code-2022/src/"
 
 
 def parse(e):
