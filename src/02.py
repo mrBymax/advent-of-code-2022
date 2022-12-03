@@ -1,9 +1,7 @@
 from utils.api import get_input
 
 input_str = get_input(2)
-
-with open('inputs/02') as f:
-    lines = f.readlines()
+lines = input_str.splitlines()
 
 total_points = 0
 

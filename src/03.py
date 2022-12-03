@@ -1,7 +1,7 @@
 from utils.api import get_input
 
 input_str = get_input(3)
-line = input_str.split('\n')
+lines = input_str.splitlines()
 
 ans = 0
 i = 0
@@ -14,9 +14,9 @@ def score(common_char):
         return ord(common_char) - ord('A') + 1 + 26
 
 
-while i < len(line):
-    for c in line[i]:
-        if c in line[i + 1] and c in line[i + 2]:
+while i < len(lines):
+    for c in lines[i]:
+        if c in lines[i + 1] and c in lines[i + 2]:
             ans += score(c)
             break
     i += 3
@@ -25,9 +25,9 @@ print(ans)
 
 # first part
 
-for line in open('inputs/03'):
-    line = line.strip()
-    first_half, second_half = line[:len(line) // 2], line[len(line) // 2:]
+for lines in open('inputs/03'):
+    lines = lines.strip()
+    first_half, second_half = lines[:len(lines) // 2], lines[len(lines) // 2:]
     for c in first_half:
         if c in second_half:
             pass
